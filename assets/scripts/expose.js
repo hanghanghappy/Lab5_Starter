@@ -10,7 +10,7 @@ function init() {
   let hornImage = document.querySelector("img");
   let hornAudio = document.querySelector("audio");
 
-  hornName.addEventListener('input', function (e) {
+  hornName.addEventListener("input", function (e) {
     let hornType = e.target.value;
     if (hornType == "air-horn") {
       hornImage.src = "assets/images/air-horn.svg";
@@ -30,20 +30,20 @@ function init() {
   })
 
   let playButton = document.querySelector("button");
-  playButton.addEventListener('click', function (e) {
+  playButton.addEventListener("click", function (e) {
     if (hornName.value != "select") {
       hornAudio.play();
       if (partyHorn == true) {
         jsConfetti.addConfetti({
-          emojis: ['🎉'],
+          emojis: ["🎉"],
         })
       }
     }
   })
 
   let volumeControl = document.getElementById("volume");
-  let volumeImage = document.querySelectorAll('img')[1];
-  volumeControl.addEventListener('input', function (e) {
+  let volumeImage = document.querySelectorAll("img")[1];
+  volumeControl.addEventListener("input", function (e) {
     hornAudio.volume = e.target.value / 100;
     if (e.target.value >= 67) {
       volumeImage.src = "assets/icons/volume-level-3.svg";
