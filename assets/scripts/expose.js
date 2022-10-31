@@ -3,7 +3,7 @@
 window.addEventListener('DOMContentLoaded', init);
 
 function init() {
-  // TODO
+
   const jsConfetti = new JSConfetti();
   let partyHorn = false;
   let hornName = document.getElementById("horn-select");
